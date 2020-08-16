@@ -26,12 +26,6 @@ public class EmpleadoPorHoras extends Empleado {
 
 	}
 
-	@Override
-	public double calcularSalario() {
-
-		return 0;
-	}
-
 	// constructor utilizado por ORM para la persistencia
 	public void EmpleadoPorHoras() {
 
@@ -52,5 +46,11 @@ public class EmpleadoPorHoras extends Empleado {
 
 	public void setBono(double bono) {
 		this.bono = bono;
+	}
+
+	@Override
+	public double calcularSalario(double pago) {
+
+		return 0;
 	}
 }

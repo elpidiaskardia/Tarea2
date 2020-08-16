@@ -35,22 +35,21 @@ public class ControlCompañia {
 	 * 
 	 * @return true si se agrego con exito el empleado,en otro caso false de no
 	 *         poder realizarse
-	 * @param nombre             del empleado
-	 * @param identificacion     unica del empleado
-	 * @param pago               valor total del salario
-	 * @param tipo               de que tipo es el empleado, si es 'a' para
-	 *                           empleados asalariados, 'h' para empleado pagados
-	 *                           semanalmente por hora, 'c' empleados pagados por
-	 *                           comision
-	 * @param porcentajeComision del 5% por ventas realizadas en la semana
-	 * @param ventasPorSemana    cantidad de ventas hechas en la semana
-	 * @param horasTrabajadas    por semana
-	 * @param bono               en caso de tener mas de 40 se adiciona al salario
-	 *                           200.000
+	 * @param nombre               del empleado
+	 * @param identificacion       unica del empleado
+	 * @param pago                 valor total del salario
+	 * @param tipo                 de que tipo es el empleado, si es 'a' para
+	 *                             empleados asalariados, 'h' para empleado pagados
+	 *                             semanalmente por hora, 'c' empleados pagados por
+	 *                             comision
+	 * @param valorVentasPorSemana valor de todas las ventas hechas en la semana
+	 * @param horasTrabajadas      por semana
+	 * @param bono                 en caso de tener mas de 40 se adiciona al salario
+	 *                             200.000
 	 * @return
 	 */
 	public boolean agregarEmpleado(String nombre, String identificacion, double pago, char tipo,
-			float porcentajeComision, int ventasPorSemana, int horasTrabajadas, double bono) {
+			double valorVentasPorSemana, int horasTrabajadas, double bono) {
 		return false;
 	}
 

@@ -1,7 +1,7 @@
 package entidad;
 
 /**
- * @version 1.0 Empleado perteneciente a una compañia, que recibe un pago
+ * @version 1.5 Empleado perteneciente a una compañia, que recibe un pago
  *          semanal
  * 
  */
@@ -14,9 +14,11 @@ public abstract class Empleado {
 	/**
 	 * metodo que calcula el salario de un empleado
 	 * 
+	 * @param pago el pago base de los empleados en la semana, si es por horas es el
+	 *             valor de la hora
 	 * @return el salario semanal del empleado
 	 */
-	public abstract double calcularSalario();
+	public abstract double calcularSalario(double pago);
 
 	/**
 	 * 

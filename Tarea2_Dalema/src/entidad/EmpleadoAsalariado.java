@@ -22,8 +22,8 @@ public class EmpleadoAsalariado extends Empleado {
 	}
 
 	@Override
-	public double calcularSalario() {
-		// TODO Auto-generated method stub
+	public double calcularSalario(double pago) {
+
 		return 0;
 	}
 
