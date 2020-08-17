@@ -22,7 +22,7 @@ public class EmpleadoAsalariado extends Empleado {
 	}
 
 	@Override
-	public double calcularSalario(double pago) {
+	public double calcularSalario() {
 
 		return 0;
 	}

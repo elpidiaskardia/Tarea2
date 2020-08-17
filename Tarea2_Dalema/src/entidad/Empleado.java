@@ -14,11 +14,9 @@ public abstract class Empleado {
 	/**
 	 * metodo que calcula el salario de un empleado
 	 * 
-	 * @param pago el pago base de los empleados en la semana, si es por horas es el
-	 *             valor de la hora
 	 * @return el salario semanal del empleado
 	 */
-	public abstract double calcularSalario(double pago);
+	public abstract double calcularSalario();
 
 	/**
 	 * 

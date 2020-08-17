@@ -49,7 +49,7 @@ public class EmpleadoPorHoras extends Empleado {
 	}
 
 	@Override
-	public double calcularSalario(double pago) {
+	public double calcularSalario() {
 
 		return 0;
 	}
