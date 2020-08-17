@@ -29,7 +29,7 @@ class VentasPorSemanaTest {
 	 */
 	@Test
 	void calcularValorTotalVentaConCantidadGrandeTest() {
-		VentasPorSemana ventasSemana = new VentasPorSemana("Vino Tinto", 80000, 20);
+		VentasPorSemana ventasSemana = new VentasPorSemana("Targueta Nintendo 64", 80000, 20);
 		double valorTotalEsperado = 1600000;
 		double valorTotalVenta = ventasSemana.calcularValorTotalVenta();
 		assertEquals(valorTotalEsperado, valorTotalVenta);
@@ -41,7 +41,7 @@ class VentasPorSemanaTest {
 	 */
 	@Test
 	void calcularValorTotalVentaConCantidadIgualACero() {
-		VentasPorSemana ventasSemana = new VentasPorSemana("Vino Tinto", 200000, 0);
+		VentasPorSemana ventasSemana = new VentasPorSemana("Game cube", 200000, 0);
 		double valorTotalEsperado = 0;
 		double valorTotalVenta = ventasSemana.calcularValorTotalVenta();
 		assertEquals(valorTotalEsperado, valorTotalVenta);
