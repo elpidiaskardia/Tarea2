@@ -20,9 +20,7 @@ public class FabricaEmpleado {
 	 *                             semanalmente por hora, 'c' empleados pagados por
 	 *                             comision
 	 * @param valorVentasPorSemana valor de todas las ventas hechas en la semana
-	 * @param horasTrabajadas      por semana
-	 * @param bono                 en caso de tener mas de 40 se adiciona al salario
-	 *                             200.000
+	 * @param horasTrabajadas      por semana 200.000
 	 * @return
 	 */
 	public static Empleado crearEmpleado(String nombre, String identificacion, double pago, char tipo,
@@ -34,7 +32,7 @@ public class FabricaEmpleado {
 				return new EmpleadoAsalariado(nombre, identificacion, pago);
 			case 'h':
 			case 'H':
-				return new EmpleadoPorHoras(nombre, identificacion, pago, horasTrabajadas, bono);
+				return new EmpleadoPorHoras(nombre, identificacion, pago, horasTrabajadas);
 			case 'c':
 			case 'C':
 				return new EmpleadoPorComision(nombre, identificacion, pago, valorVentasPorSemana);

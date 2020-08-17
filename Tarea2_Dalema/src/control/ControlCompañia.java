@@ -43,13 +43,11 @@ public class ControlCompañia {
 	 *                             semanalmente por hora, 'c' empleados pagados por
 	 *                             comision
 	 * @param valorVentasPorSemana valor de todas las ventas hechas en la semana
-	 * @param horasTrabajadas      por semana
-	 * @param bono                 en caso de tener mas de 40 se adiciona al salario
-	 *                             200.000
+	 * @param horasTrabajadas      por semana 200.000
 	 * @return
 	 */
 	public boolean agregarEmpleado(String nombre, String identificacion, double pago, char tipo,
-			double valorVentasPorSemana, int horasTrabajadas, double bono) {
+			double valorVentasPorSemana, int horasTrabajadas) {
 		return false;
 	}
 

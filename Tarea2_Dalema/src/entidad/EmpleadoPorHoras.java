@@ -15,14 +15,11 @@ public class EmpleadoPorHoras extends Empleado {
 	 * @param nombre          del empleado
 	 * @param identificacion  unica del empleado
 	 * @param pago            valor total del salario
-	 * @param horasTrabajadas por semana
-	 * @param bono            en caso de tener mas de 40 se adiciona al salario
-	 *                        200.000
+	 * @param horasTrabajadas por semana 200.000
 	 */
-	public EmpleadoPorHoras(String nombre, String identificacion, double pago, int horasTrabajadas, double bono) {
+	public EmpleadoPorHoras(String nombre, String identificacion, double pago, int horasTrabajadas) {
 		super(nombre, identificacion, pago);
 		this.horasTrabajadas = horasTrabajadas;
-		this.bono = bono;
 
 	}
 
@@ -35,22 +32,25 @@ public class EmpleadoPorHoras extends Empleado {
 		return horasTrabajadas;
 	}
 
-	public double getBono() {
-		return bono;
-	}
-
 	// sets utilizados por ORM
 	public void setHorasTrabajadas(int horasTrabajadas) {
 		this.horasTrabajadas = horasTrabajadas;
-	}
-
-	public void setBono(double bono) {
-		this.bono = bono;
 	}
 
 	@Override
 	public double calcularSalario() {
 
 		return 0;
+	}
+
+	/**
+	 * metodo que asigna quien debe tener un bono mirando las horas trabajadas, si
+	 * son mayores a 40 se le aumenta al salario 200.000
+	 * 
+	 * @param horasTrabajadas
+	 * @return
+	 */
+	public boolean darBono(int horasTrabajadas) {
+		return false;
 	}
 }
