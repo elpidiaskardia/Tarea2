@@ -27,11 +27,9 @@ public class VentasPorSemana {
 	/**
 	 * caclcula el valor total de la venta de un articulo en especifico
 	 * 
-	 * @param valor    precio del articulo
-	 * @param cantidad veces que se pide este articulo
 	 * @return el valor total de la venta de este articulo
 	 */
-	public double calcularValorTotalVenta(double valor, int cantidad) {
+	public double calcularValorTotalVenta() {
 		return 0;
 	}
 

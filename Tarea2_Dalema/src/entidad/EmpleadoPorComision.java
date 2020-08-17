@@ -58,10 +58,9 @@ public class EmpleadoPorComision extends Empleado {
 	 * metoodo que calcula la comision de las ventas, esta comiscion es el 5% de el
 	 * valor de las ventas realizadas en la semana
 	 * 
-	 * @param valorVentaPorSemana valor total de las ventas hechas en la semana
 	 * @return la comision por las ventas hechas
 	 */
-	public double calcularComisionVenta(double valorVentaPorSemana) {
+	public double calcularComisionVenta() {
 		return 0;
 	}
 
