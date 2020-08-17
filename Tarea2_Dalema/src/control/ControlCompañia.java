@@ -21,9 +21,9 @@ public class ControlCompañia {
 	}
 
 	/**
-	 * Metodo que calcula a nomina semanal de los empleados
+	 * Metodo que calcula a nomina total semanal de los empleados
 	 * 
-	 * @return la nomina semanal de los empleados de la Compañia
+	 * @return la nomina semanal de todos los empleados de la Compañia
 	 */
 	public double calcularNomina() {
 		return 0;
