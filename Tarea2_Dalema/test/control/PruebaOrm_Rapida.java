@@ -8,6 +8,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import entidad.Empleado;
+import entidad.EmpleadoAsalariado;
 import entidad.EmpleadoPorComision;
 
 /**
@@ -23,11 +24,11 @@ public class PruebaOrm_Rapida {
 		EntityManager gestorBD = fabrica.createEntityManager();
 				
 				gestorBD.getTransaction().begin();
-				Empleado empleado = new EmpleadoPorComision("Sofia", "1525985", 23548, 200);
+				Empleado empleado = new EmpleadoAsalariado("camila","1053",152);
 				gestorBD.persist(empleado);
 				gestorBD.getTransaction().commit();
 				
-				Empleado empleadoBuscado = gestorBD.find(Empleado.class, "1525985");
+				Empleado empleadoBuscado = gestorBD.find(Empleado.class, "1053");
 				System.out.println(empleadoBuscado.getNombre());
 				gestorBD.close();
 

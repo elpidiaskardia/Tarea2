@@ -29,7 +29,7 @@ public class EmpleadoPorHoras extends Empleado {
 	}
 
 	// constructor utilizado por ORM para la persistencia
-	public void EmpleadoPorHoras() {
+	public EmpleadoPorHoras() {
 
 	}
 

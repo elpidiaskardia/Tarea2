@@ -31,7 +31,7 @@ public class EmpleadoPorComision extends Empleado {
 	}
 
 	// contructor utilizado por ORM para la presistencia
-	public void EmpleadoPorComision() {
+	public EmpleadoPorComision() {
 
 	}
 

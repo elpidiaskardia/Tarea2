@@ -14,10 +14,10 @@ import javax.persistence.InheritanceType;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "tipo_Empleado")
 public abstract class Empleado {
-
-	private String nombre;
+	
 	@Id
 	private String identificacion;
+	private String nombre;
 	private double pago;
 
 	/**
@@ -34,14 +34,17 @@ public abstract class Empleado {
 	 * @param pago           valor total del salario
 	 */
 
-	public Empleado(String nombre, String identificacion, double pago) {
-
+	public Empleado( String nombre,String identificacion, double pago) {
+		this.identificacion = identificacion;
+		this.nombre = nombre;
+		this.pago = pago;
 	}
-
+	
 	// constructor usado por ORM para la persistencia
 	public Empleado() {
 
 	}
+
 
 	public String getNombre() {
 		return nombre;

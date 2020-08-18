@@ -22,10 +22,13 @@ public class EmpleadoAsalariado extends Empleado {
 		super(nombre, identificacion, pago);
 	}
 
-	// contructor utilizado por ORM para la persistencia
-	public void EmpleadoAsalaraido() {
+	// contructor utilizado por ORM para la presistencia
 
+	public EmpleadoAsalariado() {
+		
 	}
+
+
 
 	@Override
 	public double calcularSalario() {
