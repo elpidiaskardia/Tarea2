@@ -13,7 +13,6 @@ import javax.persistence.Entity;
 @DiscriminatorValue("por_Hora")
 public class EmpleadoPorHoras extends Empleado {
 	private int horasTrabajadas;
-	private double bono;
 
 	/**
 	 * 
@@ -44,8 +43,12 @@ public class EmpleadoPorHoras extends Empleado {
 
 	@Override
 	public double calcularSalario() {
-
-		return 0;
+		double salario = horasTrabajadas * getPago();
+		if(darBono()) {
+			salario += 200000;
+		}
+		
+		return salario;
 	}
 
 	/**
@@ -55,7 +58,10 @@ public class EmpleadoPorHoras extends Empleado {
 	 * @param horasTrabajadas
 	 * @return
 	 */
-	public boolean darBono(int horasTrabajadas) {
+	public boolean darBono() {
+		if(horasTrabajadas > 40) {
+			return true;
+		}
 		return false;
 	}
 }

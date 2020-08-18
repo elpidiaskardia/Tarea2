@@ -17,7 +17,7 @@ class EmpleadoAsalariadoTest {
 	@Test
 	void calcularSalarioConPagoPositivotest() {
 		EmpleadoAsalariado empleadoAsalariado = new EmpleadoAsalariado("Sasuke Ushiha", "p10", 400000);
-		double salarioEsperado = 4000000;
+		double salarioEsperado = 400000;
 		double salarioEmpleadoAsalariado = empleadoAsalariado.calcularSalario();
 		assertEquals(salarioEsperado, salarioEmpleadoAsalariado);
 	}

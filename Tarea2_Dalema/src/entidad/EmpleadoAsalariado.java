@@ -32,8 +32,7 @@ public class EmpleadoAsalariado extends Empleado {
 
 	@Override
 	public double calcularSalario() {
-
-		return 0;
-	}
+		return getPago();
+	} 
 
 }
