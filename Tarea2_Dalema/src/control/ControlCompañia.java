@@ -54,9 +54,10 @@ public class ControlCompañia {
 	/**
 	 * busca eun empleado ya regitrado , mediante su identificacion
 	 * 
+	 * @identificacion es el id unico de cada empleado
 	 * @return el empleado con su informacion, o null si no se encuentra
 	 */
-	public Empleado buscarEmpleado() throws CompañiaException {
+	public Empleado buscarEmpleado(String identificacion) throws CompañiaException {
 		return null;
 
 	}
