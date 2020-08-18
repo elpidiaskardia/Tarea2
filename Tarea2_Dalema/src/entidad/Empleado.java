@@ -1,13 +1,22 @@
 package entidad;
 
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 /**
  * @version 1.5 Empleado perteneciente a una compañia, que recibe un pago
  *          semanal
  * 
  */
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipo_Empleado")
 public abstract class Empleado {
 
 	private String nombre;
+	@Id
 	private String identificacion;
 	private double pago;
 

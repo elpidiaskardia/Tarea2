@@ -1,11 +1,16 @@
 package entidad;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
 /**
  * 
  * @author danna
  * @version 1.0 empleado que recibe un valor por cada hora trabbajada, si estas
  *          horas suman mas de 40h recibe un bono de 200.000
  */
+@Entity
+@DiscriminatorValue("por_Hora")
 public class EmpleadoPorHoras extends Empleado {
 	private int horasTrabajadas;
 	private double bono;

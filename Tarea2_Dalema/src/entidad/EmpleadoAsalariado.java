@@ -1,9 +1,15 @@
 package entidad;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
 /**
  * @version 1.0
  * @author danna Empleado que recibe un salario semanal fijo
  */
+@Entity
+@DiscriminatorValue("asalariado")
+
 public class EmpleadoAsalariado extends Empleado {
 
 	/**

@@ -2,13 +2,17 @@ package entidad;
 
 import java.util.ArrayList;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
 /**
  * 
  * @author danna
  * @version 2.0 clase emplado que recibe un salario en base semanal, mas un
  *          porcentaje del 5% adicional realizado por las ventas semanales
  */
-
+@Entity
+@DiscriminatorValue("comisionista")
 public class EmpleadoPorComision extends Empleado {
 
 	private double valorVentasPorSemana;
