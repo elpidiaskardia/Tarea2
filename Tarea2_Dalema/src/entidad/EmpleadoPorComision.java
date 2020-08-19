@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
+import control.CompañiaException;
+
 /**
  * 
  * @author danna
@@ -16,7 +18,6 @@ import javax.persistence.Entity;
 public class EmpleadoPorComision extends Empleado {
 
 	private double valorVentasPorSemana;
-	private ArrayList<VentasPorSemana> ventas;
 
 	/**
 	 * 
@@ -34,28 +35,14 @@ public class EmpleadoPorComision extends Empleado {
 	public EmpleadoPorComision() {
 
 	}
-
-	public double getValorVentasPorSemana() {
-		return valorVentasPorSemana;
-	}
-
-// sets utilizador por ORM
-
-	public void setValorVentasPorSemana(int valorVentasPorSemana) {
+	
+	// sets y gets para la persistencia
+	public void setValorVentasPorSemana(double valorVentasPorSemana) {
 		this.valorVentasPorSemana = valorVentasPorSemana;
 	}
-
-	/**
-	 * metodo que agrega a la lista ventas una venta
-	 * 
-	 * @param valorUnidad    precio del articulo que se vende
-	 * @param cantidad       del articulo
-	 * @param nombreArticulo nombre del articulo que se vende
-	 * @return true si se ha realizado la venta con exito, en otro caso false de no
-	 *         poder agregarse
-	 */
-	public boolean agregarVenta(double valorUnidad, int cantidad, String nombreArticulo) {
-		return false;
+	
+	public double getValorVentasPorSemana() {
+		return valorVentasPorSemana;
 	}
 
 	/**
