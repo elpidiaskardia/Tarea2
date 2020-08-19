@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+
 /**
  * @version 1.5 Empleado perteneciente a una compañia, que recibe un pago
  *          semanal
@@ -12,8 +13,9 @@ import javax.persistence.InheritanceType;
  */
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "tipoEmpleado")
 public abstract class Empleado {
-	
+
 	@Id
 	private String identificacion;
 	private String nombre;
@@ -33,17 +35,16 @@ public abstract class Empleado {
 	 * @param pago           valor total del salario
 	 */
 
-	public Empleado( String nombre,String identificacion, double pago) {
+	public Empleado(String nombre, String identificacion, double pago) {
 		this.identificacion = identificacion;
 		this.nombre = nombre;
 		this.pago = pago;
 	}
-	
+
 	// constructor usado por ORM para la persistencia
 	public Empleado() {
 
 	}
-
 
 	public String getNombre() {
 		return nombre;

@@ -25,11 +25,11 @@ public class ControlCompañia {
 	 */
 	public double calcularNomina() {
 		double nomina = 0;
-		
-		for(Empleado empleado : repositorioEmpleado.consultarEmpleados()) {
+
+		for (Empleado empleado : repositorioEmpleado.consultarEmpleados()) {
 			nomina += empleado.calcularSalario();
 		}
-		
+
 		return nomina;
 	}
 
@@ -51,15 +51,22 @@ public class ControlCompañia {
 	 * @return
 	 */
 	public boolean agregarEmpleado(String nombre, String identificacion, double pago, char tipo,
-			double valorVentasPorSemana, int horasTrabajadas) throws CompañiaException{
-		Empleado nuevoEmpleado =FabricaEmpleado.crearEmpleado(nombre, identificacion, pago, tipo,
-				horasTrabajadas, valorVentasPorSemana);
-		if(nuevoEmpleado==null) {
-			throw new CompañiaException("El empleado no pudo ser creado");
+			double valorVentasPorSemana, int horasTrabajadas) throws CompañiaException {
+		if (buscarEmpleado(identificacion) == null) {
+			Empleado nuevoEmpleado = FabricaEmpleado.crearEmpleado(nombre, identificacion, pago, tipo, horasTrabajadas,
+					valorVentasPorSemana);
+			if (nuevoEmpleado == null) {
+				throw new CompañiaException("El empleado no pudo ser creado");
+			}
+
+			repositorioEmpleado.adicionarEmpleado(nuevoEmpleado);
+			return true;
+
+		} else {
+			throw new CompañiaException("Ya existe un empleado con la identificacion " + identificacion);
+
 		}
-		
-		repositorioEmpleado.adicionarEmpleado(nuevoEmpleado);
-		return true;
+
 	}
 
 	/**
@@ -70,8 +77,8 @@ public class ControlCompañia {
 	 */
 	public Empleado buscarEmpleado(String identificacion) throws CompañiaException {
 		Empleado empleadoBuscado = repositorioEmpleado.buscarEmpleado(identificacion);
-		if(empleadoBuscado == null) {
-			throw new CompañiaException("El empleado con la identificacion "+identificacion+" no existe"); 
+		if (empleadoBuscado == null) {
+			throw new CompañiaException("El empleado con la identificacion " + identificacion + " no existe");
 		}
 		return empleadoBuscado;
 	}
