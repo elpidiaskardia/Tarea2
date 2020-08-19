@@ -1,8 +1,7 @@
 package control;
 
-import java.util.ArrayList;
-
 import entidad.Empleado;
+import entidad.FabricaEmpleado;
 import persistencia.RepositorioEmpleados;
 
 /**
@@ -13,7 +12,6 @@ import persistencia.RepositorioEmpleados;
  * @verion 1.0
  */
 public class ControlCompañia {
-	private ArrayList<Empleado> empleados;
 	private RepositorioEmpleados repositorioEmpleado;
 
 	public ControlCompañia(RepositorioEmpleados repositorioEmpleado) {
@@ -26,7 +24,13 @@ public class ControlCompañia {
 	 * @return la nomina semanal de todos los empleados de la Compañia
 	 */
 	public double calcularNomina() {
-		return 0;
+		double nomina = 0;
+		
+		for(Empleado empleado : repositorioEmpleado.consultarEmpleados()) {
+			nomina += empleado.calcularSalario();
+		}
+		
+		return nomina;
 	}
 
 	/**
@@ -47,8 +51,15 @@ public class ControlCompañia {
 	 * @return
 	 */
 	public boolean agregarEmpleado(String nombre, String identificacion, double pago, char tipo,
-			double valorVentasPorSemana, int horasTrabajadas) {
-		return false;
+			double valorVentasPorSemana, int horasTrabajadas) throws CompañiaException{
+		Empleado nuevoEmpleado =FabricaEmpleado.crearEmpleado(nombre, identificacion, pago, tipo,
+				horasTrabajadas, valorVentasPorSemana);
+		if(nuevoEmpleado==null) {
+			throw new CompañiaException("El empleado no pudo ser creado");
+		}
+		
+		repositorioEmpleado.adicionarEmpleado(nuevoEmpleado);
+		return true;
 	}
 
 	/**
@@ -58,7 +69,10 @@ public class ControlCompañia {
 	 * @return el empleado con su informacion, o null si no se encuentra
 	 */
 	public Empleado buscarEmpleado(String identificacion) throws CompañiaException {
-		return null;
-
+		Empleado empleadoBuscado = repositorioEmpleado.buscarEmpleado(identificacion);
+		if(empleadoBuscado == null) {
+			throw new CompañiaException("El empleado con la identificacion "+identificacion+" no existe"); 
+		}
+		return empleadoBuscado;
 	}
 }

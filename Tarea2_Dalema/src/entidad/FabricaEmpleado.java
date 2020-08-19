@@ -24,7 +24,7 @@ public class FabricaEmpleado {
 	 * @return
 	 */
 	public static Empleado crearEmpleado(String nombre, String identificacion, double pago, char tipo,
-			int horasTrabajadas, double bono, double valorVentasPorSemana) {
+			int horasTrabajadas, double valorVentasPorSemana) {
 		{
 			switch (tipo) {
 			case 'a':

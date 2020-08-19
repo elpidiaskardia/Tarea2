@@ -1,15 +1,11 @@
 package entidad;
 
-import java.util.ArrayList;
-
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
-import control.CompañiaException;
-
 /**
  * 
- * @author danna
+ * @author danna y leo
  * @version 2.0 clase emplado que recibe un salario en base semanal, mas un
  *          porcentaje del 5% adicional realizado por las ventas semanales
  */
