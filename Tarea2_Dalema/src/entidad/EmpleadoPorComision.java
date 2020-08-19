@@ -52,13 +52,17 @@ public class EmpleadoPorComision extends Empleado {
 	 * @return la comision por las ventas hechas
 	 */
 	public double calcularComisionVenta() {
+		if (valorVentasPorSemana > 0) {
+			return valorVentasPorSemana * 0.05;
+		}
+		else {
 		return 0;
+		}
 	}
 
 	@Override
 	public double calcularSalario() {
-
-		return 0;
+		return getPago() + calcularComisionVenta();
 	}
 
 }
