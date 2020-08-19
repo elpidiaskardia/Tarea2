@@ -63,7 +63,7 @@ public class OrmBaseDatos implements RepositorioEmpleados {
 	}
 
 	@Override
-	public boolean borrarBarco(Empleado empleado) {
+	public boolean borrarEmpleado(Empleado empleado) {
 		try	{
 			gestorBd.getTransaction().begin();
 			// Esto funciona porque el EntityManager está abierto todo el tiempo

@@ -48,5 +48,5 @@ public interface RepositorioEmpleados {
 	 * @return un valor booleano indicando si se pudo borrar en el repositorio o no
 	 * 
 	 */
-	public abstract boolean borrarBarco(Empleado empleado);
+	public abstract boolean borrarEmpleado(Empleado empleado);
 }
