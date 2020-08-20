@@ -19,6 +19,7 @@ import entidad.Empleado;
  * Usa una sola instancia del EntityManager para todos los métodos, y solo se
  * cierra cuando se destruye el objeto
  * 
+ * @author Manuela Rendon
  * @version 1.1
  */
 public class OrmBaseDatos implements RepositorioEmpleados {

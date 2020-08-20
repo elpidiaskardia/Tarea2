@@ -12,7 +12,8 @@ import persistencia.OrmBaseDatos;
 
 /**
  * pruebas para el metodo buscarEmpleados de la clase ControlCompañia se utiliza
- * como consulta ORM * @author danna
+ * como consulta ORM 
+ * @author Danna Vanessa Rubio
  *
  */
 class CompañiaExceptionBuscarEmpleadoTest {

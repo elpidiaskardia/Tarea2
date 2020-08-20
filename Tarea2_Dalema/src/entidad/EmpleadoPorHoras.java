@@ -5,8 +5,8 @@ import javax.persistence.Entity;
 
 /**
  * 
- * @author danna
- * @version 1.0 empleado que recibe un valor por cada hora trabbajada, si estas
+ * @author Danna Vanessa Rubio, Leonardo Sanchez
+ * @version 2.1 empleado que recibe un valor por cada hora trabbajada, si estas
  *          horas suman mas de 40h recibe un bono de 200.000
  */
 @Entity

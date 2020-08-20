@@ -10,8 +10,8 @@ import persistencia.RepositorioEmpleados;
  * clase de control de compañia donde se regitran los empleados de este, con los
  * principales metodos del programa
  * 
- * @author danna
- * @verion 1.0
+ * @author Danna Vanessa Rubio, Leonardo Sanchez
+ * @verion 2.1
  */
 public class ControlCompañia {
 	private RepositorioEmpleados repositorioEmpleado;

@@ -11,7 +11,7 @@ import persistencia.OrmBaseDatos;
 /**
  * pruebas para el metodo agregarEmpleado de ControlCompañia
  * 
- * @author danna
+ * @author Danna Vanessa Rubio
  *
  */
 class ControlCompañiaAgregarEmpleadoTest {

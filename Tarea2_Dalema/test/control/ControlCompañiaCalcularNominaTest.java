@@ -10,7 +10,7 @@ import persistencia.OrmBaseDatos;
  * pruebas para el metodo calcularNomina de la clase ControlCompañia se usa como
  * Repositorio ORM
  * 
- * @author danna
+ * @author Danna Vanessa Rubio
  *
  */
 class ControlCompañiaCalcularNominaTest {

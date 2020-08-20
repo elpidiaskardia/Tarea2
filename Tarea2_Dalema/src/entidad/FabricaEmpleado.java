@@ -2,7 +2,7 @@ package entidad;
 
 /**
  * 
- * @author danna
+ * @author Danna Vanessa Rubio
  * @version 1.2 permite crear un empleado deacuerdo al tipo selesccionado, asi
  *          las clases que usan los emplados no tiene que conocer las hijas,
  *          solo la clase padre, esto corresponde al patron de diseño FACTORY

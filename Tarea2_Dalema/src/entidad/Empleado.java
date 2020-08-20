@@ -7,9 +7,9 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
 /**
+ * @author Danna Vanessa Rubio, Leonardo Sanchez
  * @version 1.5 Empleado perteneciente a una compañia, que recibe un pago
  *          semanal
- * 
  */
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)

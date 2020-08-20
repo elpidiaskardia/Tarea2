@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
  * saca el 5% del valor total de las ventas y este sera la comision para el
  * empleado contratado por comision
  * 
- * @author danna
+ * @author Danna Vanessa Rubio
  *
  */
 class EmpleadoPorComisionCalcularComisionVentaTest {

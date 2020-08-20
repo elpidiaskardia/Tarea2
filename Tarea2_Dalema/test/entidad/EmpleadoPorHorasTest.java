@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 /**
  * pruebas del metodo calcularSalario para un empleado contratado por horas
  * 
- * @author danna
+ * @author Danna Vanessa Rubio
  *
  */
 class EmpleadoPorHorasTest {

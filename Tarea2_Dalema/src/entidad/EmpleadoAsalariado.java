@@ -4,8 +4,9 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 /**
- * @version 1.0
- * @author danna Empleado que recibe un salario semanal fijo
+ * Empleado que recibe un salario semanal fijo
+ * @version 1.5
+ * @author Danna Vanessa Rubio, Leonardo Sanchez 
  */
 @Entity
 @DiscriminatorValue("asalariado")

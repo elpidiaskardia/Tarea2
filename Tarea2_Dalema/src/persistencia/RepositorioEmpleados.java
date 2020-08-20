@@ -8,6 +8,7 @@ import entidad.Empleado;
  * Servicios relacionados con la gestion de los datos de los empleado en un
  * repositorio (consultar, adicionar, buscar, borrar)
  * 
+ * @author Danna Vanessa Rubio
  * @version 1.0
  */
 

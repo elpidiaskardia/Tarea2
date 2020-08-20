@@ -4,6 +4,7 @@ package control;
  * Excepciones relacionadas con el registro de empleados en el contro compañia,
  * especialmente por no cumplir alguna regla del negocio
  * 
+ * @author Danna Vanessa Rubio
  * @version 1.0
  */
 

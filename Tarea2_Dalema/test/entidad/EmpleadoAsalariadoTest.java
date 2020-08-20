@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 /**
  * pruebas para el metodo calcularSalario para un empleado asalariado
  * 
- * @author danna
+ * @author Danna Vanessa Rubio
  *
  */
 class EmpleadoAsalariadoTest {

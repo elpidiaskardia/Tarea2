@@ -4,10 +4,11 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 /**
- * 
- * @author danna y leo
- * @version 2.0 clase emplado que recibe un salario en base semanal, mas un
+ * clase emplado que recibe un salario en base semanal, mas un
  *          porcentaje del 5% adicional realizado por las ventas semanales
+ * 
+ * @author Danna Vanessa Rubio, Leonardo Sanchez
+ * @version 2.0 
  */
 @Entity
 @DiscriminatorValue("comisionista")
@@ -48,7 +49,7 @@ public class EmpleadoPorComision extends Empleado {
 	 * @return la comision por las ventas hechas
 	 */
 	public double calcularComisionVenta() {
-		if (valorVentasPorSemana > 0) {
+		if (darComision()) {
 			return valorVentasPorSemana * 0.05;
 		}
 		else {
@@ -61,4 +62,10 @@ public class EmpleadoPorComision extends Empleado {
 		return getPago() + calcularComisionVenta();
 	}
 
+	public boolean darComision() {
+		if(valorVentasPorSemana > 0) {
+			return true;
+		}
+		return false;
+	}
 }

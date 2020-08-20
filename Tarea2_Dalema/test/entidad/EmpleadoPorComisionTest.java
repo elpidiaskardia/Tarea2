@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 /**
  * Pruebas para el metodo calcularSalario de un empleado contratado por comision
  * 
- * @author danna
+ * @author Danna Vanessa Rubio
  *
  */
 class EmpleadoPorComisionTest {
