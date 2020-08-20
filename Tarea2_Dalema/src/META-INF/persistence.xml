@@ -19,8 +19,10 @@
 				value="jdbc:sqlite:empleadosOrm.db" />
 			<property name="eclipselink.ddl-generation"
 				value="create-tables" />
-			<property name="eclipselink.target-database"
+			<property name="eclipselink.ddl-generation.output-mode"
 				value="database" />
+			<property name="eclipselink.target-database"
+				value="Database"/>
 		</properties>
 	</persistence-unit>
 </persistence>
