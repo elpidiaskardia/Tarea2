@@ -1,5 +1,7 @@
 package control;
 
+import java.util.List;
+
 import entidad.Empleado;
 import entidad.FabricaEmpleado;
 import persistencia.RepositorioEmpleados;
@@ -24,12 +26,11 @@ public class ControlCompañia {
 	 * @return la nomina semanal de todos los empleados de la Compañia
 	 */
 	public double calcularNomina() {
+		List<Empleado> empleados = repositorioEmpleado.consultarEmpleados();
 		double nomina = 0;
-
-		for (Empleado empleado : repositorioEmpleado.consultarEmpleados()) {
+		for (Empleado empleado : empleados) {
 			nomina += empleado.calcularSalario();
 		}
-
 		return nomina;
 	}
 
@@ -52,20 +53,18 @@ public class ControlCompañia {
 	 */
 	public boolean agregarEmpleado(String nombre, String identificacion, double pago, char tipo,
 			double valorVentasPorSemana, int horasTrabajadas) throws CompañiaException {
-		if (buscarEmpleado(identificacion) == null) {
-			Empleado nuevoEmpleado = FabricaEmpleado.crearEmpleado(nombre, identificacion, pago, tipo, horasTrabajadas,
-					valorVentasPorSemana);
-			if (nuevoEmpleado == null) {
-				throw new CompañiaException("El empleado no pudo ser creado");
-			}
-
-			repositorioEmpleado.adicionarEmpleado(nuevoEmpleado);
-			return true;
-
-		} else {
-			throw new CompañiaException("Ya existe un empleado con la identificacion " + identificacion);
-
+		if(valorVentasPorSemana < 0) {
+			throw new CompañiaException("El valor de ventas por semana debe ser positivo");
 		}
+		if(horasTrabajadas < 0) {
+			throw new CompañiaException("El valor de horas trabajadas debe ser positivo");
+		}
+		Empleado empleadoBuscado = buscarEmpleado(identificacion);
+		if (empleadoBuscado == null) {
+			Empleado empleadoNuevo = FabricaEmpleado.crearEmpleado(nombre, identificacion, pago, tipo, horasTrabajadas, valorVentasPorSemana);
+			return repositorioEmpleado.adicionarEmpleado(empleadoNuevo);
+		}
+		return false;
 
 	}
 
@@ -76,10 +75,6 @@ public class ControlCompañia {
 	 * @return el empleado con su informacion, o null si no se encuentra
 	 */
 	public Empleado buscarEmpleado(String identificacion) throws CompañiaException {
-		Empleado empleadoBuscado = repositorioEmpleado.buscarEmpleado(identificacion);
-		if (empleadoBuscado == null) {
-			throw new CompañiaException("El empleado con la identificacion " + identificacion + " no existe");
-		}
-		return empleadoBuscado;
+		return repositorioEmpleado.buscarEmpleado(identificacion);
 	}
 }

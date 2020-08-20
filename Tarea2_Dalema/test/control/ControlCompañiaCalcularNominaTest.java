@@ -14,6 +14,20 @@ import persistencia.OrmBaseDatos;
  *
  */
 class ControlCompañiaCalcularNominaTest {
+	
+
+
+	/**
+	 * se calcula la nomina sin empleados, se espera que la nomina sea 0
+	 */
+
+	@Test
+	void calcularNominaSinEmpleado() {
+		ControlCompañia compañia = new ControlCompañia(new OrmBaseDatos());
+		double nominaEsperada = 0;
+		double nominaResultante = compañia.calcularNomina();
+		assertEquals(nominaEsperada, nominaResultante);
+	}
 
 	@Test
 	/**
@@ -30,22 +44,10 @@ class ControlCompañiaCalcularNominaTest {
 		compañia.agregarEmpleado("Junji Ito", "p08", 30000, 'h', 39, 0);
 		compañia.agregarEmpleado("Eiichiro oda", "p33", 400000, 'c', 0, 500000);
 		compañia.agregarEmpleado("Hiromu Arakawa", "p24", 400000, 'c', 0, 0);
-		double nominaEsperada = 3855000;
+		double nominaEsperada = 2660000;
 		double nominaResultante = compañia.calcularNomina();
 		assertEquals(nominaEsperada, nominaResultante);
 
-	}
-
-	/**
-	 * se calcula la nomina sin empleados, se espera que la nomina sea 0
-	 */
-
-	@Test
-	void calcularNomainaSinEEmpleado() {
-		ControlCompañia compañia = new ControlCompañia(new OrmBaseDatos());
-		double nominaEsperada = 0;
-		double nominaResultante = compañia.calcularNomina();
-		assertEquals(nominaEsperada, nominaResultante);
 	}
 
 }
